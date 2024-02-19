@@ -13,7 +13,7 @@ export const MessageHistory:FC<MessageHistoryProps> = ({list = []}) => {
     
   return (
     <>
-        {list.length && 
+        {list.length > 0 && 
             list.map(el => (
                 el.type === 'message' 
                 ? <Message from={el.from} message={el} key={el.id}/>
